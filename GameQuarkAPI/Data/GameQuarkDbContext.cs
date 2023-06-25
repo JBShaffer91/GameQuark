@@ -1,5 +1,7 @@
+#nullable disable
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using GameQuarkAPI.Models;
 
 namespace GameQuarkAPI.Data
 {
@@ -9,5 +11,8 @@ namespace GameQuarkAPI.Data
     : base(options)
     {
     }
+
+    public DbSet<Article> Articles { get; set; }
   }
 }
+#nullable restore
